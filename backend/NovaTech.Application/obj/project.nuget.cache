@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VhRmdaKuTpAehIEuFx2sZtKIEP08DQt8fwp1mNp55WcipJM9sWClUStSlQFjXxSKUpT21R6EI31Nm6E0ysk61g==",
+  "success": true,
+  "projectFilePath": "/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/NovaTech.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/vivand/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,154 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 1000;
+
+  background: rgba(250, 248, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #00685f;
+  color: white;
+
+  font-weight: 700;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 20px;
+
+  background: #bcc9c6;
+}
+
+.brand-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-highlight {
+  color: #00685f;
+  margin-left: 4px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.secure-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 8px;
+
+  background: #eaedff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.secure-icon {
+  color: #00685f;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navigation a {
+  color: #3d4947;
+  text-decoration: none;
+
+  font-size: 13px;
+}
+
+.navigation a:hover {
+  color: #00685f;
+}
+
+.navigation .nav-active {
+  color: #00685f;
+  font-weight: 700;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  background: #e2e7ff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.language-selector button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  color: #3d4947;
+}
+
+.language-active {
+  color: #00685f;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #00685f;
+  color: white;
+
+  font-size: 15px;
+}

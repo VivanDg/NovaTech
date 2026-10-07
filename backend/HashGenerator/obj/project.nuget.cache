@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AfuypqfTZnT76jlxFDbhqppDCIYvf5sZGnXR9+q4nPBblaZicOeoNP+SxXPB8kH5WCYewnVa6YVt0mzfFslDuw==",
+  "success": true,
+  "projectFilePath": "/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/HashGenerator.csproj",
+  "expectedPackageFiles": [
+    "/home/vivand/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

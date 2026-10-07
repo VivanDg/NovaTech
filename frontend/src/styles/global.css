@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100%;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+
+  background: #faf8ff;
+
+  color: #131b2e;
+
+  overscroll-behavior: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+
+  padding-top: 64px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.login-section {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 32px 40px;
+}
+
+.login-container {
+  width: 100%;
+
+  max-width: 1280px;
+
+  display: grid;
+
+  grid-template-columns: 5fr 7fr;
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+.login-column {
+  display: flex;
+
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+
+  .secure-status {
+    display: none;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .security-panel {
+    min-height: auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header-container {
+    padding: 0 20px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 12px;
+  }
+
+  .login-section {
+    padding: 20px;
+  }
+
+  .simulation-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .simulation-bar {
+    padding: 10px 20px;
+  }
+
+  .security-panel {
+    padding: 24px;
+  }
+
+  .security-panel h1 {
+    font-size: 30px;
+  }
+
+  .login-card {
+    padding: 25px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ux-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sso-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .security-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

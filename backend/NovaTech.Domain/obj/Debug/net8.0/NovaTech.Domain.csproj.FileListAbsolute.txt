@@ -1,0 +1,11 @@
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/bin/Debug/net8.0/NovaTech.Domain.deps.json
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/bin/Debug/net8.0/NovaTech.Domain.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/bin/Debug/net8.0/NovaTech.Domain.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.AssemblyInfoInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.AssemblyInfo.cs
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.csproj.CoreCompileInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/refint/NovaTech.Domain.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/NovaTech.Domain.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Domain/obj/Debug/net8.0/ref/NovaTech.Domain.dll

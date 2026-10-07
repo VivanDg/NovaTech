@@ -1,0 +1,15 @@
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/bin/Debug/net8.0/NovaTech.Application.deps.json
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/bin/Debug/net8.0/NovaTech.Application.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/bin/Debug/net8.0/NovaTech.Application.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/bin/Debug/net8.0/NovaTech.Domain.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/bin/Debug/net8.0/NovaTech.Domain.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.csproj.AssemblyReference.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.AssemblyInfoInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.AssemblyInfo.cs
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.csproj.CoreCompileInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.csproj.CopyComplete
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/refint/NovaTech.Application.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/NovaTech.Application.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/NovaTech.Application/obj/Debug/net8.0/ref/NovaTech.Application.dll

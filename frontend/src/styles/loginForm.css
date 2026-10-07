@@ -1,0 +1,356 @@
+.login-card {
+  width: 100%;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  margin-bottom: 25px;
+}
+
+.login-title-row {
+  display: flex;
+  justify-content: space-between;
+
+  color: #00685f;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.login-title-row small {
+  color: #3d4947;
+}
+
+.login-header h2 {
+  margin: 10px 0 5px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 28px;
+
+  color: #131b2e;
+}
+
+.login-header p {
+  margin: 0;
+
+  color: #3d4947;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mock-buttons {
+  display: flex;
+
+  gap: 6px;
+
+  margin-bottom: 15px;
+}
+
+.mock-buttons button {
+  border: none;
+
+  padding: 5px 9px;
+
+  background: #eaedff;
+
+  color: #3d4947;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.mock-buttons button:hover {
+  background: #dae2fd;
+}
+
+.alert {
+  padding: 14px;
+
+  margin-bottom: 18px;
+}
+
+.alert strong {
+  font-size: 13px;
+}
+
+.alert p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+}
+
+.alert-error {
+  background: #ffdad6;
+
+  color: #93000a;
+}
+
+.alert-success {
+  background: #89f5e7;
+
+  color: #00201d;
+}
+
+.login-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label,
+.password-label label {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: #131b2e;
+}
+
+.form-group input {
+  width: 100%;
+
+  height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: none;
+
+  background: #f2f3ff;
+
+  color: #131b2e;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.form-group input:focus {
+  box-shadow:
+    0 0 0 2px #00685f;
+}
+
+.password-label {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.password-label a {
+  color: #00685f;
+
+  font-size: 12px;
+}
+
+.password-container {
+  display: flex;
+
+  background: #f2f3ff;
+}
+
+.password-container input {
+  flex: 1;
+
+  border: none;
+
+  background: transparent;
+
+  outline: none;
+}
+
+.password-container button {
+  border: none;
+
+  background: transparent;
+
+  padding: 0 14px;
+
+  cursor: pointer;
+
+  color: #3d4947;
+}
+
+.remember-container {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-size: 12px;
+}
+
+.remember-container label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.remember-container input {
+  accent-color: #00685f;
+}
+
+.remember-container > span {
+  color: #49607c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.login-button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #00685f;
+
+  color: white;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background: #008378;
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+.sso-section {
+  margin-top: 30px;
+}
+
+.sso-divider {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.sso-divider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+
+  background: #e2e7ff;
+}
+
+.sso-divider span {
+  position: relative;
+
+  padding: 0 12px;
+
+  background: white;
+
+  color: #3d4947;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+}
+
+.sso-buttons {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.sso-buttons button {
+  height: 40px;
+
+  border: none;
+
+  background: #f2f3ff;
+
+  color: #131b2e;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sso-buttons button:hover {
+  background: #eaedff;
+}
+
+.security-footer {
+  margin-top: 25px;
+
+  padding: 14px;
+
+  background: #f2f3ff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  color: #3d4947;
+
+  font-size: 11px;
+}
+
+.security-footer strong {
+  font-size: 10px;
+
+  text-transform: uppercase;
+}

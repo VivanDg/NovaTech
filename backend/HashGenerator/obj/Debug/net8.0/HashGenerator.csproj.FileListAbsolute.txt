@@ -1,0 +1,17 @@
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.csproj.AssemblyReference.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.AssemblyInfoInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.AssemblyInfo.cs
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.csproj.CoreCompileInputs.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/HashGenerator
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/HashGenerator.deps.json
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/HashGenerator.runtimeconfig.json
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/HashGenerator.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/HashGenerator.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/bin/Debug/net8.0/BCrypt-Net-Next.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.csproj.CopyComplete
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/refint/HashGenerator.dll
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.pdb
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/HashGenerator.genruntimeconfig.cache
+/home/vivand/Documentos/2026 - II CICLO 9/CONSTRUCCIÓN DE SOFTWARE/Prácticas/NovaTech/backend/HashGenerator/obj/Debug/net8.0/ref/HashGenerator.dll

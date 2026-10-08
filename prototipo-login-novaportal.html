@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframe Login NovaPortal</title>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2b2b; --paper:#fdfdfb; --grid:#e9e9e4; --soft:#f1f1ec;
+    --note:#fff3a3; --red:#d93025; --green:#2e8b57; --blue:#2f6fd6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:24px; color:var(--ink);
+    font-family:'Patrick Hand','Comic Sans MS','Segoe Print',cursive; font-size:18px;
+    background-color:var(--paper);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:24px 24px;
+  }
+  body.dark{ --ink:#f2f2f2; --paper:#222; --grid:#2e2e2e; --soft:#2c2c2c; }
+  h1{margin:0 0 4px; font-size:30px}
+  .sub{margin:0 0 16px; opacity:.75}
+
+  /* ---------- barra de estados ---------- */
+  .estados{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; align-items:center}
+  .estados span{font-weight:bold}
+  .estados button{
+    font:inherit; cursor:pointer; padding:6px 14px; color:var(--ink); background:var(--paper);
+    border:2px solid var(--ink); border-radius:12px 8px 14px 6px;
+  }
+  .estados button.activo{background:var(--note); color:#2b2b2b; box-shadow:3px 3px 0 var(--ink)}
+
+  /* ---------- pantalla ---------- */
+  .pantalla{
+    display:grid; grid-template-columns:minmax(300px,32%) 1fr; min-height:640px;
+    border:3px solid var(--ink); border-radius:10px 14px 8px 12px; background:var(--paper); overflow:hidden;
+  }
+  .izq{padding:28px 30px; display:flex; flex-direction:column; border-right:3px solid var(--ink); position:relative}
+  .der{position:relative; padding:28px 36px; background:var(--soft); overflow:hidden}
+
+  .box{border:2px solid var(--ink); border-radius:8px 12px 7px 11px; background:var(--paper)}
+  .rel{position:relative}
+
+  /* marcador numerado */
+  .n{
+    position:absolute; z-index:5; width:26px; height:26px; border-radius:50%;
+    background:var(--red); color:#fff; font-size:15px; line-height:26px; text-align:center;
+    border:2px solid #fff; box-shadow:0 0 0 1.5px var(--red);
+  }
+  .n.tl{top:-13px; left:-13px} .n.tr{top:-13px; right:-13px} .n.r{top:50%; right:-13px; margin-top:-13px}
+
+  /* ---------- placeholders de imagen ---------- */
+  .ph{
+    position:relative; border:2px solid var(--ink); background:var(--paper);
+    display:flex; align-items:center; justify-content:center; text-align:center; color:var(--ink);
+  }
+  .ph::before,.ph::after{content:""; position:absolute; inset:0;
+    background:linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) 50%,transparent calc(50% + 1px));}
+  .ph::after{transform:scaleX(-1)}
+  .ph b{position:relative; z-index:1; background:var(--paper); padding:2px 8px; border:1.5px dashed var(--ink); font-weight:normal; font-size:16px}
+  .ph.logo{width:48px; height:48px; border-radius:10px; flex:none}
+  .ph.logo b{display:none}
+  .ph.icono{width:44px; height:44px; border-radius:10px; flex:none}
+  .ph.icono b{display:none}
+
+  .marca{display:flex; align-items:center; gap:12px; font-size:30px; position:relative}
+  .marca small{display:block; font-size:16px; opacity:.7}
+
+  /* ---------- formulario ---------- */
+  .card{margin-top:44px; padding:26px 24px 24px; position:relative}
+  .card h2{margin:6px 0 2px; font-size:28px; position:relative; display:inline-block}
+  .card p{margin:0 0 14px; opacity:.8}
+  .campo{margin-bottom:14px; position:relative}
+  .campo label{display:block; margin-bottom:5px}
+  .input{
+    display:flex; align-items:center; justify-content:space-between; height:44px; padding:0 12px;
+    border:2px solid var(--ink); border-radius:8px 6px 9px 7px; opacity:.95;
+  }
+  .input span.ph-txt{opacity:.5}
+  .ojo{
+    width:30px; height:22px; border:2px solid var(--ink); border-radius:50%; position:relative; flex:none; background:var(--paper);
+  }
+  .ojo::after{content:""; position:absolute; width:8px; height:8px; border-radius:50%; background:var(--ink); top:5px; left:9px}
+  .ojo.tachado::before{content:""; position:absolute; left:-4px; top:8px; width:36px; height:2px; background:var(--ink); transform:rotate(-35deg); z-index:2}
+  .err{display:none; color:var(--red); font-size:15px; margin-top:4px}
+  .err::before{content:"⚠ "}
+  .campo.mal .input{border-color:var(--red); border-style:dashed}
+  .campo.mal .err{display:block}
+
+  .msg{display:none; padding:10px 12px; margin:6px 0 12px; border:2px solid var(--ink); border-radius:8px; font-size:16px; position:relative}
+  .msg.proc{display:block; background:#e8f0ff; border-color:var(--blue); color:#1c4aa3}
+  .msg.error{display:block; background:#fdeceb; border-color:var(--red); color:var(--red)}
+  .msg.exito{display:block; background:#e6f5ec; border-color:var(--green); color:var(--green)}
+
+  .btn{
+    width:100%; height:46px; margin-top:4px; font:inherit; font-size:20px; color:var(--ink); cursor:default;
+    border:2.5px solid var(--ink); border-radius:10px 7px 11px 8px; background:var(--soft); box-shadow:3px 3px 0 var(--ink);
+    position:relative;
+  }
+  .btn.off{opacity:.55; box-shadow:none}
+  .off-inputs .input{opacity:.5; background:var(--soft)}
+
+  .pie{margin-top:auto; text-align:center; padding-top:26px; opacity:.75; font-size:16px; position:relative}
+
+  /* ---------- panel derecho ---------- */
+  .toggle{
+    position:absolute; top:18px; right:22px; z-index:4; padding:6px 14px; border:2px solid var(--ink);
+    border-radius:20px; background:var(--paper); cursor:pointer; font:inherit; color:var(--ink);
+  }
+  .fondo{position:absolute; inset:0; z-index:0; border:none; opacity:.45}
+  .fondo b{font-size:20px}
+  .der > *:not(.fondo){position:relative; z-index:1}
+  .der .marca{margin-top:32px}
+  .lema{margin:46px 0 8px; font-size:38px; line-height:1.1; max-width:480px}
+  .desc{max-width:420px; opacity:.85}
+  .lista{position:absolute !important; right:36px; bottom:70px; width:280px; display:grid; gap:16px; z-index:2}
+  .item{display:flex; gap:12px; align-items:center; background:var(--paper); padding:8px 10px; border:2px solid var(--ink); border-radius:10px; position:relative}
+  .item small{display:block; font-size:14px; opacity:.75}
+  .lemaInf{position:absolute !important; left:36px; bottom:34px; letter-spacing:.14em; font-size:15px; z-index:2; background:var(--paper); padding:2px 8px; border:1.5px dashed var(--ink)}
+
+  /* ---------- leyenda ---------- */
+  .leyenda{margin-top:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px}
+  .nota{background:var(--note); color:#2b2b2b; padding:10px 12px 10px 46px; position:relative; border:1.5px solid #c9b73e; transform:rotate(-.4deg); box-shadow:2px 3px 0 rgba(0,0,0,.15)}
+  .nota:nth-child(even){transform:rotate(.5deg)}
+  .nota i{
+    position:absolute; left:10px; top:10px; width:26px; height:26px; border-radius:50%; background:var(--red);
+    color:#fff; font-style:normal; text-align:center; line-height:26px; font-size:15px;
+  }
+  .nota b{display:block}
+  .nota span{font-size:16px}
+
+  @media (max-width:860px){
+    .pantalla{grid-template-columns:1fr}
+    .izq{border-right:none; border-bottom:3px solid var(--ink)}
+    .der{min-height:560px}
+    .lista{position:relative !important; right:auto; bottom:auto; width:100%; margin-top:30px}
+    .lemaInf{display:none}
+  }
+</style>
+</head>
+<body>
+
+<h1>Wireframe – Login NovaPortal</h1>
+<p class="sub">Prototipo de baja fidelidad. Los números rojos se explican en las notas de abajo. Cambia el estado con los botones.</p>
+
+<div class="estados" id="estados">
+  <span>Estado:</span>
+  <button data-s="normal" class="activo">1. Normal</button>
+  <button data-s="validacion">2. Errores de validación</button>
+  <button data-s="procesando">3. Procesando</button>
+  <button data-s="credenciales">4. Credenciales incorrectas</button>
+  <button data-s="conexion">5. Error de conexión</button>
+  <button data-s="exito">6. Éxito</button>
+</div>
+
+<div class="pantalla">
+
+  <!-- ================= PANEL IZQUIERDO ================= -->
+  <section class="izq" id="izq">
+
+    <div class="marca">
+      <span class="n tl" style="top:-8px;left:-14px">1</span>
+      <div class="ph logo"><b>logo</b></div>
+      <div>NovaPortal</div>
+    </div>
+
+    <div class="box card">
+      <h2><span class="n tl" style="left:-30px;top:-6px">2</span>Iniciar sesión</h2>
+      <p>Ingresa a tu cuenta para continuar</p>
+
+      <div class="campo" id="campoCorreo">
+        <span class="n tr">3</span>
+        <label>Correo institucional</label>
+        <div class="input"><span class="ph-txt">correo@novatech.com</span></div>
+        <div class="err" id="errCorreo">El correo institucional es obligatorio. / Ingresa un correo electrónico válido.<span class="n r" style="right:-18px;top:6px">4</span></div>
+      </div>
+
+      <div class="campo" id="campoPass">
+        <span class="n tr">5</span>
+        <label>Contraseña</label>
+        <div class="input">
+          <span class="ph-txt" id="txtPass">Ingresa tu contraseña</span>
+          <div class="rel"><span class="n tr" style="top:-20px;right:-16px">6</span><div class="ojo" id="ojo"></div></div>
+        </div>
+        <div class="err">La contraseña es obligatoria.<span class="n r" style="right:-18px;top:6px">7</span></div>
+      </div>
+
+      <div class="msg" id="msg"><span class="n tl">8</span><span id="msgTxt"></span></div>
+
+      <button class="btn" id="btn" type="button"><span class="n tr">9</span><span id="btnTxt">Ingresar</span></button>
+    </div>
+
+    <div class="pie"><span class="n tl" style="left:30px;top:10px">10</span>NovaTech Servicios Digitales S.A.C.</div>
+  </section>
+
+  <!-- ================= PANEL DERECHO ================= -->
+  <section class="der">
+    <div class="ph fondo"><b>IMAGEN DE FONDO (montaña / persona con laptop)</b></div>
+    <span class="n tl" style="top:10px;left:10px;z-index:6">11</span>
+
+    <button class="toggle" id="toggle" type="button"><span class="n tl" style="top:-12px;left:-12px">15</span>☾ Modo oscuro</button>
+
+    <div class="marca" style="font-size:44px; gap:16px">
+      <span class="n tl" style="top:-10px;left:-14px">12</span>
+      <div class="ph logo" style="width:78px;height:78px"><b>logo</b></div>
+      <div>NovaPortal<small>NovaTech Servicios Digitales S.A.C.</small></div>
+    </div>
+
+    <div class="lema rel"><span class="n tl" style="left:-26px;top:0">13</span>Tecnología que impulsa tu crecimiento</div>
+    <div class="desc">Plataforma interna para acceder a documentos, solicitudes, reportes y servicios corporativos. Todo en un solo lugar.</div>
+
+    <div class="lista">
+      <span class="n tl" style="top:-16px;left:-16px">14</span>
+      <div class="item"><div class="ph icono"><b></b></div><div>Documentos<small>Accede a la información que necesitas.</small></div></div>
+      <div class="item"><div class="ph icono"><b></b></div><div>Solicitudes<small>Gestiona tus solicitudes de forma rápida.</small></div></div>
+      <div class="item"><div class="ph icono"><b></b></div><div>Reportes<small>Consulta y descarga reportes.</small></div></div>
+      <div class="item"><div class="ph icono"><b></b></div><div>Servicios corporativos<small>Todo en un solo lugar.</small></div></div>
+    </div>
+
+    <div class="lemaInf"><span class="n tl" style="top:-14px;left:-14px">16</span>INNOVACIÓN • TECNOLOGÍA • PERSONAS</div>
+  </section>
+</div>
+
+<!-- ================= LEYENDA ================= -->
+<div class="leyenda">
+  <div class="nota"><i>1</i><b>Logo pequeño + nombre</b><span>Espacio para el logo (SVG/PNG, 48×48 px). Refuerza la identidad de marca.</span></div>
+  <div class="nota"><i>2</i><b>Título y subtítulo</b><span>"Iniciar sesión" indica el propósito de la pantalla. El subtítulo guía al usuario.</span></div>
+  <div class="nota"><i>3</i><b>Campo correo</b><span>Etiqueta siempre visible, placeholder de ejemplo y type="email".</span></div>
+  <div class="nota"><i>4</i><b>Errores del correo</b><span>Aparecen bajo el campo: vacío ("obligatorio") o formato inválido. Borde rojo discontinuo.</span></div>
+  <div class="nota"><i>5</i><b>Campo contraseña</b><span>Enmascarada por defecto (type="password") con etiqueta visible.</span></div>
+  <div class="nota"><i>6</i><b>Botón ojo</b><span>Muestra u oculta la contraseña. Ojo abierto = oculta; ojo tachado = visible. Con aria-label.</span></div>
+  <div class="nota"><i>7</i><b>Error de contraseña</b><span>"La contraseña es obligatoria." Se muestra junto al campo.</span></div>
+  <div class="nota"><i>8</i><b>Mensaje de estado</b><span>Un solo bloque con role="alert" que cambia: procesando (azul), éxito (verde) o error (rojo).</span></div>
+  <div class="nota"><i>9</i><b>Botón Ingresar</b><span>Acción principal única. Durante el proceso se deshabilita y dice "Verificando...".</span></div>
+  <div class="nota"><i>10</i><b>Pie</b><span>Nombre de la empresa (NovaTech Servicios Digitales S.A.C.).</span></div>
+  <div class="nota"><i>11</i><b>Imagen de fondo</b><span>Espacio para fotografía institucional. Debe tener contraste suficiente para el texto.</span></div>
+  <div class="nota"><i>12</i><b>Logo grande</b><span>Versión ampliada del logo con el nombre de la empresa.</span></div>
+  <div class="nota"><i>13</i><b>Lema y descripción</b><span>Mensaje de bienvenida y propósito de la plataforma.</span></div>
+  <div class="nota"><i>14</i><b>Lista de servicios</b><span>4 ítems con espacio para ícono (44×44 px), título y descripción corta.</span></div>
+  <div class="nota"><i>15</i><b>Modo oscuro</b><span>Interruptor visible arriba a la derecha. Prueba el botón en este prototipo.</span></div>
+  <div class="nota"><i>16</i><b>Lema inferior</b><span>"Innovación • Tecnología • Personas". Elemento decorativo de marca.</span></div>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const izq = $('izq'), campoCorreo = $('campoCorreo'), campoPass = $('campoPass');
+  const msg = $('msg'), msgTxt = $('msgTxt'), btn = $('btn'), btnTxt = $('btnTxt');
+
+  function limpiar(){
+    campoCorreo.classList.remove('mal'); campoPass.classList.remove('mal');
+    msg.className = 'msg'; msgTxt.textContent = '';
+    btn.classList.remove('off'); btnTxt.textContent = 'Ingresar';
+    izq.classList.remove('off-inputs');
+  }
+  function setMsg(tipo, txt){ msg.className = 'msg ' + tipo; msgTxt.textContent = txt; }
+
+  function estado(s){
+    limpiar();
+    if(s === 'validacion'){ campoCorreo.classList.add('mal'); campoPass.classList.add('mal'); }
+    if(s === 'procesando'){ setMsg('proc','Verificando credenciales...'); btn.classList.add('off'); btnTxt.textContent='Verificando...'; izq.classList.add('off-inputs'); }
+    if(s === 'credenciales'){ setMsg('error','El correo o la contraseña no son correctos.'); }
+    if(s === 'conexion'){ setMsg('error','No se pudo conectar con el servidor. Inténtalo nuevamente.'); }
+    if(s === 'exito'){ setMsg('exito','Inicio de sesión correcto.'); }
+    document.querySelectorAll('#estados button').forEach(b => b.classList.toggle('activo', b.dataset.s === s));
+  }
+  document.querySelectorAll('#estados button').forEach(b => b.addEventListener('click', () => estado(b.dataset.s)));
+
+  // ojo: alterna entre oculto y visible
+  $('ojo').addEventListener('click', function(){
+    this.classList.toggle('tachado');
+    $('txtPass').textContent = this.classList.contains('tachado') ? 'MiClave123' : 'Ingresa tu contraseña';
+  });
+
+  // modo oscuro
+  $('toggle').addEventListener('click', function(){
+    document.body.classList.toggle('dark');
+    const oscuro = document.body.classList.contains('dark');
+    this.firstChild.nextSibling.textContent = oscuro ? '☀ Modo claro' : '☾ Modo oscuro';
+  });
+</script>
+</body>
+</html>
